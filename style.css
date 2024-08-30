@@ -1,0 +1,103 @@
+:root {
+  --primary-color: rgb(236, 236, 236);
+  --secondary-color: rgb(21, 21, 21);
+  --blue-color: #2bc5cd;
+  --orange-color: #ff693d;
+  --border: 2px solid var(--blue-color);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+.grid-container {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: auto;
+  margin: 60px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px;
+  gap: 2%;
+}
+.box {
+  width: 100%;
+  height: 100%;
+}
+.box > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header {
+  background-color: var(--blue-color);
+  grid-column: 1/1;
+  grid-row: 1/3;
+  text-align: center;
+}
+header > h1 {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 200px;
+  color: var(--primary-color);
+}
+header > p {
+  margin: 20px;
+  color: var(--primary-color);
+  font-size: 15px;
+}
+.school {
+  grid-column: 2/2;
+  grid-row: 1/1;
+}
+.student {
+  grid-column: 3/3;
+  grid-row: 1/1;
+}
+main {
+  grid-column: 2/2;
+  grid-row: 2/2;
+  font-size: 12px;
+  text-align: center;
+  place-content: center;
+  color: var(--blue-color);
+  border: var(--border);
+}
+.time {
+  grid-column: 3/3;
+  grid-row: 2/2;
+}
+.alumni {
+  grid-column: 1/1;
+  grid-row: 3/3;
+}
+footer {
+  grid-column: 2/4;
+  grid-row: 3/4;
+  background-color: var(--orange-color);
+}
+footer > h3 {
+  font-size: 25px;
+  margin: 20px;
+  color: var(--primary-color);
+}
+footer > p {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+footer > button {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border-style: none;
+  transition: transform 0.5s;
+}
+footer > button:hover {
+  color: var(--blue-color);
+  transform: scale(1.1);
+}
